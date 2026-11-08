@@ -41,6 +41,68 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
 
+  /* ---------- FAQ: плавное раскрытие ответов ---------- */
+  // <details> не умеет анимировать высоту, поэтому перехватываем клик
+  // и анимируем обёртку .faq__body. Сам плюс/минус меняется мгновенно (CSS).
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const canAnimate = typeof Element.prototype.animate === "function";
+
+  document.querySelectorAll(".faq__item").forEach((item) => {
+    const summary = item.querySelector("summary");
+    const body = item.querySelector(".faq__body");
+    if (!summary || !body || reduceMotion || !canAnimate) return;
+
+    let animation = null;
+    let expanded = item.open;
+
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      // Если анимации нет, доверяем фактическому состоянию details
+      if (!animation) expanded = item.open;
+      expanded = !expanded;
+
+      // Высоту меряем до остановки: после cancel она скакнёт к auto.
+      // У закрытого details контент скрыт, но layout у него сохраняется,
+      // поэтому при открытии стартуем с нуля, а не с rect.height.
+      const isOpen = item.open;
+      const from = isOpen ? body.getBoundingClientRect().height : 0;
+      const fromOpacity = isOpen ? Number(getComputedStyle(body).opacity) : 0;
+      if (animation) {
+        animation.cancel();
+        animation = null;
+      }
+
+      if (expanded) {
+        item.classList.remove("is-closing");
+        item.open = true;
+        animation = body.animate(
+          [
+            { height: from + "px", opacity: fromOpacity },
+            { height: body.scrollHeight + "px", opacity: 1 },
+          ],
+          { duration: 380, easing: "cubic-bezier(.22, .61, .36, 1)" }
+        );
+        animation.onfinish = () => { animation = null; };
+      } else {
+        // Плюс возвращаем сразу, не дожидаясь конца сворачивания
+        item.classList.add("is-closing");
+        animation = body.animate(
+          [
+            { height: from + "px", opacity: fromOpacity },
+            { height: "0px", opacity: 0 },
+          ],
+          { duration: 300, easing: "cubic-bezier(.22, .61, .36, 1)" }
+        );
+        animation.onfinish = () => {
+          item.open = false;
+          item.classList.remove("is-closing");
+          animation = null;
+        };
+      }
+    });
+  });
+
   /* ---------- Маска телефона +7 (XXX) XXX-XX-XX ---------- */
 
   // Возвращает цифры в виде 7XXXXXXXXXX. Первую «8» или «7», введённую

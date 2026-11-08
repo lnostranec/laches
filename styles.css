@@ -426,10 +426,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   right: 6px; top: 50%;
   width: 16px; height: 1px;
   background: var(--ink);
-  transition: transform .3s var(--ease);
 }
+/* Плюс превращается в минус мгновенно — без анимации */
 .faq__item summary::after { transform: rotate(90deg); }
 .faq__item[open] summary::after { transform: rotate(0); }
+/* Пока ответ сворачивается, details ещё open — возвращаем плюс сразу */
+.faq__item.is-closing summary::after { transform: rotate(90deg); }
+/* Обёртка ответа: высоту анимирует script.js, overflow нужен для плавного раскрытия */
+.faq__body { overflow: hidden; }
 .faq__item p { margin: 0; padding: 0 48px 26px 0; color: #5c5c5c; }
 
 /* ---------- Форма записи ---------- */
