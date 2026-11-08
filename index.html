@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>«Название» — наращивание волос, мастер Яна</title>
+  <meta name="description" content="Наращивание волос: капсульное, микрокапсульное, ленточное. Мастер Яна. Натуральные славянские волосы, незаметные капсулы, уютный приём на дому.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Шапка ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="На главную">
+        <span class="logo__name">«Название»</span>
+        <span class="logo__sub">hair studio</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#about" class="nav__link">Обо мне</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#works" class="nav__link">Работы</a>
+        <a href="#care" class="nav__link">Уход</a>
+        <a href="#faq" class="nav__link">Вопросы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+        <a href="#booking" class="btn btn--light nav__cta" data-open-booking>Записаться</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Первый экран ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">Наращивание волос · мастер Яна</p>
+          <h1 class="hero__title">
+            Длина,<br>
+            <em>о которой вы</em><br>
+            мечтали
+          </h1>
+          <p class="hero__lead">
+            Подбираю волосы в&nbsp;тон и&nbsp;текстуру ваших&nbsp;— переход невозможно заметить.
+            Натуральные славянские волосы и&nbsp;до&nbsp;3&nbsp;месяцев носки без&nbsp;коррекции.
+          </p>
+          <div class="hero__actions">
+            <a href="#booking" class="btn btn--light" data-open-booking>Записаться</a>
+            <a href="#services" class="btn btn--ghost-light">Услуги и цены</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <!-- ВРЕМЕННЫЕ фото с Unsplash — заменить на свои: src="assets/hero.jpg" -->
+          <div class="photo placeholder--dark hero__photo">
+            <img src="https://images.unsplash.com/photo-1785456439444-5132a64f0dd7?w=1100&q=80&auto=format&fit=crop"
+                 alt="Мастер наращивает волосы клиентке" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__stats container">
+        <div class="stat"><span class="stat__num">5+</span><span class="stat__label">лет опыта</span></div>
+        <div class="stat"><span class="stat__num">500+</span><span class="stat__label">довольных клиенток</span></div>
+        <div class="stat"><span class="stat__num">70&nbsp;см</span><span class="stat__label">максимальная длина</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Обо мне ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="photo about__photo">
+          <img src="https://images.unsplash.com/photo-1634449571017-5fecfd26ad76?w=900&q=80&auto=format&fit=crop"
+               alt="Яна за работой" loading="lazy">
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow">Обо мне</p>
+          <h2 class="section__title">Привет, я Яна</h2>
+          <p>
+            Я мастер по наращиванию волос с опытом более 5 лет. Для меня наращивание — это не конвейер,
+            а внимательная работа с каждой клиенткой: перед процедурой мы вместе
+            подбираем длину, объём, оттенок и технологию, чтобы результат выглядел естественно.
+          </p>
+          <p>
+            Принимаю у себя дома в уютной, спокойной обстановке — без суеты салона.
+            Работаю только с натуральными волосами проверенных поставщиков
+            и профессиональным кератином — бережно к вашим родным волосам.
+          </p>
+
+          <ul class="features">
+            <li class="feature">
+              <span class="feature__num">01</span>
+              <div>
+                <h3 class="feature__title">Натуральные волосы</h3>
+                <p>Славянские и южнорусские, подбор оттенка точно в тон</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__num">02</span>
+              <div>
+                <h3 class="feature__title">Незаметно</h3>
+                <p>Аккуратные микрокапсулы — не видно даже в высоком хвосте</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__num">03</span>
+              <div>
+                <h3 class="feature__title">Комфорт</h3>
+                <p>Удобное кресло, чай и любимый сериал во время процедуры</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Услуги ===== -->
+    <section class="section section--dark" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow eyebrow--light">Услуги и цены</p>
+          <h2 class="section__title">Список услуг</h2>
+        </div>
+
+        <ul class="price-list">
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Капсульное наращивание</h3>
+              <p class="price__desc">Горячая итальянская технология: прочные кератиновые капсулы, носка до 3 месяцев.</p>
+            </div>
+            <span class="price__time">~3–4 ч</span>
+            <span class="price__cost">от 8 000 ₽</span>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Микрокапсульное</h3>
+              <p class="price__desc">Для тонких и коротких волос, зоны висков и чёлки. Капсулы размером с рисовое зёрнышко.</p>
+            </div>
+            <span class="price__time">~4–5 ч</span>
+            <span class="price__cost">от 10 000 ₽</span>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Ленточное наращивание</h3>
+              <p class="price__desc">Холодная технология: быстро и безопасно, подходит для ослабленных волос.</p>
+            </div>
+            <span class="price__time">~1–1.5 ч</span>
+            <span class="price__cost">от 5 000 ₽</span>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Коррекция</h3>
+              <p class="price__desc">Снятие и повторное наращивание тех же прядей. Раз в 2–3 месяца.</p>
+            </div>
+            <span class="price__time">~4 ч</span>
+            <span class="price__cost">от 7 000 ₽</span>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Снятие</h3>
+              <p class="price__desc">Бережное снятие специальным средством без вреда для родных волос.</p>
+            </div>
+            <span class="price__time">~1–1.5 ч</span>
+            <span class="price__cost">от 2 000 ₽</span>
+          </li>
+          <li class="price">
+            <div class="price__main">
+              <h3 class="price__name">Волосы</h3>
+              <p class="price__desc">Натуральные славянские и южнорусские волосы 40–70 см — в наличии и под заказ.</p>
+            </div>
+            <span class="price__time">подбор</span>
+            <span class="price__cost">по запросу</span>
+          </li>
+        </ul>
+
+        <p class="note">* Цены за работу указаны для примера. Стоимость волос рассчитывается отдельно.</p>
+      </div>
+    </section>
+
+    <!-- ===== Работы ===== -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <div>
+            <p class="eyebrow">Портфолио</p>
+            <h2 class="section__title">Мои работы</h2>
+          </div>
+          <a href="https://vk.com/" class="link-arrow" target="_blank" rel="noopener">Больше работ в группе VK →</a>
+        </div>
+
+        <div class="gallery">
+          <figure class="photo gallery__item gallery__item--tall">
+            <img src="https://images.unsplash.com/photo-1730573520149-7a5b97d35ccc?w=800&q=80&auto=format&fit=crop" alt="Длинные светлые волосы после наращивания" loading="lazy">
+            <figcaption>Капсульное</figcaption>
+          </figure>
+          <figure class="photo gallery__item">
+            <img src="https://images.unsplash.com/photo-1785456411888-c2e842552820?w=800&q=80&auto=format&fit=crop" alt="Объёмные волосы с плавным переходом цвета" loading="lazy">
+            <figcaption>Омбре</figcaption>
+          </figure>
+          <figure class="photo gallery__item">
+            <img src="https://images.unsplash.com/photo-1560869713-bf165a9cfac1?w=800&q=80&auto=format&fit=crop" alt="Локоны на нарощенных волосах" loading="lazy">
+            <figcaption>Локоны</figcaption>
+          </figure>
+          <figure class="photo gallery__item">
+            <img src="https://images.unsplash.com/photo-1785456390070-9960e3997066?w=800&q=80&auto=format&fit=crop" alt="Укладка нарощенных волос" loading="lazy">
+            <figcaption>Укладка</figcaption>
+          </figure>
+          <figure class="photo gallery__item">
+            <img src="https://images.unsplash.com/photo-1785456463151-623876d5b7af?w=800&q=80&auto=format&fit=crop" alt="Процесс наращивания волос" loading="lazy">
+            <figcaption>Микрокапсулы</figcaption>
+          </figure>
+          <figure class="photo gallery__item gallery__item--wide">
+            <img src="https://images.unsplash.com/photo-1785456283212-338f5bc44d50?w=1400&q=80&auto=format&fit=crop" alt="Длинные волнистые волосы после наращивания" loading="lazy">
+            <figcaption>Результат</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Как проходит / уход ===== -->
+    <section class="section section--soft" id="care">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Как это проходит</p>
+          <h2 class="section__title">От записи до результата</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">I</span>
+            <h3 class="step__title">Запись</h3>
+            <p>Оставьте заявку на сайте — я свяжусь с вами и подберу удобное время.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">II</span>
+            <h3 class="step__title">Консультация</h3>
+            <p>Смотрим ваши волосы, подбираем оттенок, длину и количество прядей.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">III</span>
+            <h3 class="step__title">Процедура</h3>
+            <p>От 1 до 5 часов в зависимости от технологии. Удобное кресло, чай и никакого дискомфорта.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">IV</span>
+            <h3 class="step__title">Уход</h3>
+            <p>Даю памятку и подсказываю средства, чтобы волосы радовали как можно дольше.</p>
+          </li>
+        </ol>
+
+        <div class="care">
+          <h3 class="care__title">Памятка по уходу</h3>
+          <ul class="care__list">
+            <li>Не мойте голову первые 48 часов</li>
+            <li>Расчёсывайте волосы специальной щёткой, придерживая у корней</li>
+            <li>На ночь заплетайте свободную косу</li>
+            <li>Не наносите маски и масла на зону капсул</li>
+            <li>Сушите волосы сразу после мытья, не ложитесь с мокрой головой</li>
+            <li>Приходите на коррекцию через 2–3 месяца</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container faq">
+        <div class="faq__head">
+          <p class="eyebrow">Вопросы</p>
+          <h2 class="section__title">Часто спрашивают</h2>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Вредно ли наращивание для родных волос?</summary>
+            <p>При правильно подобранном весе прядей и своевременной коррекции — нет. Я всегда оцениваю состояние ваших волос и не даю на них лишней нагрузки.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Сколько носятся нарощенные волосы?</summary>
+            <p>Коррекция нужна раз в 2–3 месяца для капсул и раз в 6–8 недель для лент. Сами волосы при хорошем уходе можно перенаращивать и носить до года и дольше.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Будут ли заметны капсулы?</summary>
+            <p>Нет. Использую микрокапсулы и подбираю цвет кератина под ваши волосы — переход незаметен даже в собранной причёске.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Какая длина своих волос нужна?</summary>
+            <p>Для капсульного наращивания — от 10–15 см, для микрокапсул и лент — от 8 см. Пришлите фото, и я подскажу точнее.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Где проходит процедура?</summary>
+            <p>Принимаю у себя дома. Точный адрес и как добраться сообщу после записи.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Запись ===== -->
+    <section class="section section--dark" id="booking">
+      <div class="container booking">
+        <div class="booking__text">
+          <p class="eyebrow eyebrow--light">Запись</p>
+          <h2 class="section__title">Оставьте заявку</h2>
+          <p>
+            Напишите имя и телефон — я свяжусь с вами в течение дня,
+            отвечу на вопросы и подберу удобное время.
+          </p>
+          <p class="booking__alt">
+            Или напишите напрямую:
+            <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+          </p>
+        </div>
+
+        <form class="form" id="booking-form" novalidate>
+          <label class="field">
+            <span class="field__label">Имя</span>
+            <input class="field__input" type="text" name="name" autocomplete="given-name" maxlength="60" required>
+            <span class="field__error">Укажите имя</span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input class="field__input" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+            <span class="field__error">Укажите корректный номер</span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Комментарий</span>
+            <textarea class="field__input field__input--area" name="comment" rows="3" maxlength="1000" placeholder="Желаемая длина, технология, удобные дни…"></textarea>
+          </label>
+
+          <!-- ловушка для спам-ботов, людям не видна -->
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <!-- Не label: галочка ставится только кликом по квадратику, текст — ссылка на согласие -->
+          <div class="check">
+            <input type="checkbox" name="consent" required aria-labelledby="consent-text">
+            <span id="consent-text">Соглашаюсь с <a href="consent.html" target="_blank">обработкой персональных данных</a></span>
+          </div>
+
+          <button type="submit" class="btn btn--light form__submit">Отправить заявку</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Контакты ===== -->
+    <section class="section" id="contacts">
+      <div class="container contacts">
+        <div>
+          <p class="eyebrow">Контакты</p>
+          <h2 class="section__title">Как меня найти</h2>
+        </div>
+
+        <dl class="contacts__list">
+          <div class="contacts__item">
+            <dt>Где</dt>
+            <dd>г. Город, район «Район»<br><small>точный адрес — после записи</small></dd>
+          </div>
+          <div class="contacts__item">
+            <dt>Время работы</dt>
+            <dd>Пн–Сб, 10:00–20:00<br><small>по предварительной записи</small></dd>
+          </div>
+          <div class="contacts__item">
+            <dt>Телефон</dt>
+            <dd><a href="tel:+70000000000">+7 (000) 000-00-00</a></dd>
+          </div>
+          <div class="contacts__item">
+            <dt>Соцсети</dt>
+            <dd class="socials">
+              <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+              <a href="https://vk.com/" target="_blank" rel="noopener">ВКонтакте</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo__name logo__name--sm">«Название»</span>
+      <span>© <span id="year">2026</span> Мастер Яна. Наращивание волос</span>
+      <span class="footer__links">
+        <a href="offer.html">Публичная оферта</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- ===== Всплывающее окно записи ===== -->
+  <dialog class="modal" id="booking-modal" aria-labelledby="modal-title">
+    <div class="modal__box">
+      <button type="button" class="modal__close" data-close-modal aria-label="Закрыть"></button>
+
+      <div class="modal__content">
+        <p class="eyebrow">Запись</p>
+        <h2 class="modal__title" id="modal-title">Оставьте заявку</h2>
+        <p class="modal__lead">Я перезвоню, отвечу на вопросы и подберу удобное время.</p>
+
+        <form class="form form--light" id="modal-form" novalidate>
+          <label class="field">
+            <span class="field__label">Имя</span>
+            <input class="field__input" type="text" name="name" autocomplete="given-name" maxlength="60" required>
+            <span class="field__error">Укажите имя</span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input class="field__input" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+            <span class="field__error">Укажите корректный номер</span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Комментарий</span>
+            <textarea class="field__input field__input--area" name="comment" rows="2" maxlength="1000" placeholder="Желаемая длина, технология, удобные дни…"></textarea>
+          </label>
+
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="check">
+            <input type="checkbox" name="consent" required aria-labelledby="modal-consent-text">
+            <span id="modal-consent-text">Соглашаюсь с <a href="consent.html" target="_blank">обработкой персональных данных</a></span>
+          </div>
+
+          <button type="submit" class="btn btn--dark form__submit">Перезвоните мне</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+
+          <p class="form__legal">
+            Отправляя заявку, вы принимаете условия <a href="offer.html" target="_blank">публичной оферты</a>
+            и подтверждаете согласие с <a href="privacy.html" target="_blank">политикой обработки персональных данных</a>.
+          </p>
+        </form>
+      </div>
+
+      <div class="modal__done">
+        <h2 class="modal__title">Спасибо!</h2>
+        <p class="modal__lead">Заявка отправлена — я скоро вам перезвоню.</p>
+        <button type="button" class="btn btn--dark" data-close-modal>Закрыть</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
