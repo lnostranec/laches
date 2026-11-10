@@ -1,4 +1,8 @@
 (() => {
+  // Адрес API Gateway (Yandex Cloud) для отправки заявок.
+  // Если пусто — форма отправляет на send.php (локальный PHP).
+  const FORM_ENDPOINT = "https://d5d57af9abv90qre275n.764nr5vy.apigw.yandexcloud.net/send";
+
   const header = document.getElementById("header");
   const burger = document.getElementById("burger");
   const nav = document.getElementById("nav");
@@ -175,7 +179,7 @@
       showStatus("Отправляем…");
 
       try {
-        const res = await fetch("send.php", {
+        const res = await fetch(FORM_ENDPOINT || "send.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -196,7 +200,7 @@
           showStatus("Спасибо! Заявка отправлена — я скоро с вами свяжусь.", "success");
         }
       } catch (err) {
-        showStatus("Не удалось отправить заявку. Попробуйте ещё раз или напишите мне в Telegram.", "error");
+        showStatus("Не удалось отправить заявку. Попробуйте ещё раз или напишите мне в сообществе ВКонтакте.", "error");
       } finally {
         submit.disabled = false;
       }

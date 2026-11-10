@@ -36,6 +36,7 @@ php -S localhost:8090
 - «Название» — в `index.html`, `privacy.html`, `404.html`
 - Цены и тексты услуг, цифры в hero (5+ лет, 1000+ клиенток)
 - Город/район, телефон, ссылки на Telegram/VK (`https://t.me/` → `https://t.me/username`)
-- Фото: сейчас стоят **временные** фото с Unsplash (ссылки `images.unsplash.com`).
-  Положить свои в `assets/` и заменить `src` у `<img>` (первый экран, «Обо мне», 6 фото в галерее).
+- Фото: в `assets/` лежат временные изображения `hero.webp`, `about.webp`,
+  `work-1.webp` … `work-wide.webp`. Заменить их на реальные фото мастера и работ,
+  сохранив имена файлов — `src` в `index.html` менять не нужно.
 - Данные оператора в `privacy.html`
