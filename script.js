@@ -42,7 +42,8 @@
   }
 
   /* ---------- Год в подвале ---------- */
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 
   /* ---------- FAQ: плавное раскрытие ответов ---------- */
