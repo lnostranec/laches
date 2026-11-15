@@ -246,6 +246,19 @@
   // Клик по затемнённому фону закрывает окно
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
 
+  /* ---------- Портфолио: показать/скрыть фотографии ---------- */
+
+  const worksToggle = document.querySelector(".works__toggle");
+  const worksGallery = document.getElementById("works-gallery");
+
+  if (worksToggle && worksGallery) {
+    worksToggle.addEventListener("click", () => {
+      const open = worksToggle.getAttribute("aria-expanded") !== "true";
+      worksToggle.setAttribute("aria-expanded", String(open));
+      worksGallery.hidden = !open;
+    });
+  }
+
   /* ---------- Просмотр фотографий галереи ---------- */
 
   const lightbox = document.getElementById("lightbox");

@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>#works-gallery[hidden] { display: grid; }</style></noscript>
 </head>
 <body>
 
@@ -26,6 +27,7 @@
         <a href="#about" class="nav__link">Обо мне</a>
         <a href="#services" class="nav__link">Услуги</a>
         <a href="#works" class="nav__link">Работы</a>
+        <a href="#training" class="nav__link">Обучение</a>
         <a href="#care" class="nav__link">Уход</a>
         <a href="#faq" class="nav__link">Вопросы</a>
         <a href="#contacts" class="nav__link">Контакты</a>
@@ -184,10 +186,14 @@
       <div class="container">
         <div class="section__head">
           <p class="eyebrow">Портфолио</p>
-          <h2 class="section__title">Мои работы</h2>
+          <h2 class="section__title">
+            <button class="works__toggle" type="button" aria-expanded="false" aria-controls="works-gallery">
+              Мои работы
+            </button>
+          </h2>
         </div>
 
-        <div class="gallery">
+        <div class="gallery" id="works-gallery" hidden>
           <figure class="photo gallery__item gallery__item--tall">
             <img src="assets/work-1.webp" width="800" height="1600" alt="Длинные красные волосы после наращивания" loading="lazy">
           </figure>
@@ -209,6 +215,69 @@
           <figure class="photo gallery__item">
             <img src="assets/work-7.webp" width="800" height="800" alt="До и после наращивания" loading="lazy">
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Обучение ===== -->
+    <section class="section section--dark" id="training">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow eyebrow--light">Обучение</p>
+          <h2 class="section__title">Обучение наращиванию волос</h2>
+        </div>
+
+        <div class="training">
+          <div class="training__intro">
+            <p class="training__lead">Милые девушки, здравствуйте! Меня зовут Яна, я дипломированный преподаватель и мастер по наращиванию волос.</p>
+            <p>Мечтаете освоить профессию, которая будет вам по душе и приносить доход с индивидуальным графиком, который вы подберёте сами? Я помогу.</p>
+          </div>
+
+          <div class="training__program">
+            <h3 class="training__subtitle">Что будет на обучении</h3>
+            <ul class="training__list">
+              <li>знакомство с рабочими инструментами;</li>
+              <li>виды капсул: стандарт, микро, нано;</li>
+              <li>отработка на манекене: наращивание и снятие;</li>
+              <li>правила подбора структуры и количества прядей для каждой клиентки;</li>
+              <li>уход за нарощенными волосами;</li>
+              <li>типы волос;</li>
+              <li>распределение капсул, чтобы они были незаметны;</li>
+              <li>работа со срезом (капсулирование);</li>
+              <li>работа с кардой и без неё.</li>
+            </ul>
+          </div>
+
+          <p class="training__note">
+            Расскажу все тонкости и секреты наращивания, чтобы волосы действительно держались.
+            Дам контакты поставщиков и подскажу, с чего начать. После обучения я остаюсь на связи и всегда рада помочь.
+          </p>
+
+          <div class="training__formats">
+            <h3 class="training__subtitle">Форматы и стоимость</h3>
+            <ul class="training__prices">
+              <li class="training__price">
+                <span class="training__price-title">3 дня с отработкой на модели</span>
+                <strong class="training__price-value">26 000 ₽</strong>
+                <span class="training__price-note">Свидетельство с занесением данных в ФИС ФРДО</span>
+              </li>
+              <li class="training__price">
+                <span class="training__price-title">3 дня без модели</span>
+                <strong class="training__price-value">16 200 ₽</strong>
+                <span class="training__price-note">Сертификат без занесения данных</span>
+              </li>
+              <li class="training__price">
+                <span class="training__price-title">2 дня без модели</span>
+                <strong class="training__price-value">10 700 ₽</strong>
+                <span class="training__price-note">Сертификат</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="training__note training__note--studio">
+            На начальном этапе развития предоставляю возможность работать в моей студии.
+          </p>
+          <a href="#booking" class="btn btn--light training__cta" data-open-booking>Записаться на обучение</a>
         </div>
       </div>
     </section>
