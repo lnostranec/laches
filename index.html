@@ -61,7 +61,7 @@
         </div>
 
         <div class="hero__visual">
-          <!-- Временное изображение — заменить на фото мастера: assets/hero.webp -->
+          <!-- Фото мастера: assets/hero.webp (кадр из work-3) -->
           <div class="photo placeholder--dark hero__photo">
             <img src="assets/hero.webp" width="1200" height="1500"
                  alt="Мастер наращивает волосы клиентке" fetchpriority="high">
@@ -446,6 +446,12 @@
         <button type="button" class="btn btn--dark" data-close-modal>Закрыть</button>
       </div>
     </div>
+  </dialog>
+
+  <!-- ===== Просмотр фото ===== -->
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр фотографии">
+    <button type="button" class="lightbox__close" data-close-lightbox aria-label="Закрыть"></button>
+    <img class="lightbox__img" id="lightbox-img" alt="">
   </dialog>
 
   <script src="script.js" defer></script>

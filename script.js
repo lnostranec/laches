@@ -245,4 +245,46 @@
   modal.querySelectorAll("[data-close-modal]").forEach((btn) => btn.addEventListener("click", () => modal.close()));
   // Клик по затемнённому фону закрывает окно
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
+
+  /* ---------- Просмотр фотографий галереи ---------- */
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  if (lightbox && lightboxImg && typeof lightbox.showModal === "function") {
+    const openLightbox = (img) => {
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.showModal();
+      document.body.classList.add("no-scroll");
+    };
+
+    document.querySelectorAll(".gallery__item").forEach((item) => {
+      const img = item.querySelector("img");
+      if (!img) return;
+
+      item.tabIndex = 0;
+      item.setAttribute("role", "button");
+      item.setAttribute("aria-label", "Открыть фото: " + img.alt);
+      item.addEventListener("click", () => openLightbox(img));
+      item.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(img);
+        }
+      });
+    });
+
+    lightbox.querySelectorAll("[data-close-lightbox]").forEach((btn) => {
+      btn.addEventListener("click", () => lightbox.close());
+    });
+    // Клик по затемнённому фону закрывает просмотр
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) lightbox.close();
+    });
+    lightbox.addEventListener("close", () => {
+      document.body.classList.remove("no-scroll");
+      lightboxImg.removeAttribute("src");
+    });
+  }
 })();
