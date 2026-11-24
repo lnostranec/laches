@@ -739,19 +739,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .cookie {
   position: fixed;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 60;
-  width: min(760px, calc(100% - 32px));
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 28px;
-  padding: 20px 24px;
+  gap: 32px;
+  padding: 18px max(24px, calc((100vw - 1200px) / 2));
   background: var(--ink);
   color: var(--white);
-  border: 1px solid var(--line-dark);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, .35);
+  border-top: 1px solid var(--line-dark);
+  box-shadow: 0 -18px 48px rgba(0, 0, 0, .35);
 }
 .cookie p { flex: 1; margin: 0; font-size: 13px; line-height: 1.5; color: #b8b8b8; }
 .cookie a { color: var(--white); }
@@ -769,8 +769,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   cursor: pointer;
 }
 .cookie__essential:hover { color: var(--white); }
-
-body.cookie-open { padding-bottom: 110px; }
 
 /* ---------- Появление при скролле ---------- */
 
